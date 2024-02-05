@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet author="carles" id="1">
+        <createTable tableName="oauth2_registered_client">
+            <column name="id" type="VARCHAR(100)">
+                <constraints primaryKey="true"
+                             primaryKeyName="PK__OAUTH2_REGISTERED_CLIENT" nullable="false"/>
+            </column>
+            <column name="client_id" type="VARCHAR(100)"/>
+            <column name="client_id_issued_at" type="TIMESTAMP"/>
+            <column name="client_secret" type="VARCHAR(200)"/>
+            <column name="client_secret_expires_at" type="TIMESTAMP"/>
+            <column name="client_name" type="VARCHAR(200)"/>
+            <column name="client_authentication_methods" type="VARCHAR(1000)"/>
+            <column name="authorization_grant_types" type="VARCHAR(1000)"/>
+            <column name="redirect_uris" type="varchar(1000)"/>
+            <column name="scopes" type="VARCHAR(1000)"/>
+            <column name="client_settings" type="varchar(2000)"/>
+            <column name="token_settings" type="varchar(2000)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

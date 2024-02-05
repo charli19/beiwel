@@ -1,0 +1,208 @@
+﻿<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <changeSet author="carles" id="1">
+    <insert tableName="role">
+      <column name="name" value="user"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="role">
+      <column name="name" value="professional"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="role">
+      <column name="name" value="admin"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+  </changeSet>
+
+  <changeSet author="carles" id="2">
+    <insert tableName="status">
+      <column name="name" value="Pendiente"/>
+      <column name="color" value="#3300ff"/>
+      <column name="background_color" value="#3300ff33"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="status">
+      <column name="name" value="Confirmada"/>
+      <column name="color" value="#28bc5c"/>
+      <column name="background_color" value="#28bc5c33"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="status">
+      <column name="name" value="Cancelada"/>
+      <column name="color" value="#e35259"/>
+      <column name="background_color" value="#e3525933"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="status">
+      <column name="name" value="Finalizada"/>
+      <column name="color" value="#727272"/>
+      <column name="background_color" value="#72727233"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="status">
+      <column name="name" value="Expirada"/>
+      <column name="color" value="#727272"/>
+      <column name="background_color" value="#72727233"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+    <insert tableName="status">
+      <column name="name" value="Rechazada"/>
+      <column name="color" value="#e35259"/>
+      <column name="background_color" value="#e3525933"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+  </changeSet>
+
+  <changeSet author="carles" id="3">
+    <insert tableName="category">
+      <column name="name" value="Fisioterapia"/>
+      <column name="subjects" value="Fisioterapeutas"/>
+      <column name="subject" value="Fisioterapeuta"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/fisioterapia.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Masajes"/>
+      <column name="subjects" value="Masajistas"/>
+      <column name="subject" value="Masajista"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/masajista.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Psicología"/>
+      <column name="subjects" value="Psicólogos/as"/>
+      <column name="subject" value="Psicólogo/a"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/psicologia.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Coaching"/>
+      <column name="subjects" value="Coaches"/>
+      <column name="subject" value="Coach"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/coach.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Dietética / Nutrición"/>
+      <column name="subjects" value="Dietistas / Nutricionistas"/>
+      <column name="subject" value="Dietista / Nutricionista"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/nutricion.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Yoga"/>
+      <column name="subjects" value="Instructores/as de Yoga"/>
+      <column name="subject" value="Instructor/a de Yoga"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/yoga.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Entrenamiento Fitness"/>
+      <column name="subjects" value="Entrenadores/as Fitness"/>
+      <column name="subject" value="Entrenador/a Fitness"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/fitness.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="category">
+      <column name="name" value="Meditación"/>
+      <column name="subjects" value="Guías de Meditación"/>
+      <column name="subject" value="Guía de Meditación"/>
+      <column name="icon_url" value="https://beiwel.com/img/app/meditacion.png"/>
+      <column name="standard" valueBoolean="true"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+
+  </changeSet>
+
+  <changeSet author="dani" id="4">
+
+    <insert tableName="session_type">
+      <column name="type" value="Dirección del profesional"/>
+      <column name="color" value="#727272"/>
+      <column name="background_color" value="#72727233"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+    <insert tableName="session_type">
+      <column name="type" value="A domicilio"/>
+      <column name="color" value="#727272"/>
+      <column name="background_color" value="#72727233"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+    <insert tableName="session_type">
+      <column name="type" value="Online"/>
+      <column name="color" value="#727272"/>
+      <column name="background_color" value="#72727233"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+  </changeSet>
+
+
+  <changeSet author="dani" id="5">
+
+    <insert tableName="notification_channel">
+      <column name="name" value="Email"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="notification_channel">
+      <column name="name" value="Push"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+    <insert tableName="notification_type">
+      <column name="name" value="Reminders"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="notification_type">
+      <column name="name" value="Requests"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+    <insert tableName="notification_type">
+      <column name="name" value="Expirations"/>
+      <column name="created_date" valueDate="current_timestamp"/>
+      <column name="updated_date" valueDate="current_timestamp"/>
+    </insert>
+
+
+  </changeSet>
+
+
+</databaseChangeLog>
